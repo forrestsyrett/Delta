@@ -133,10 +133,11 @@ Each system in Delta is implemented as its own "Delta Core", which serves as a s
 
 Why iOS 12.2 or later? Doing so allows me to distribute Delta without embedding Swift libraries inside. This helps me afford bandwidth costs by reducing download sizes by roughly 30%, but also noticeably improves how long it takes to install/refresh Delta with AltStore. If you're compiling Delta yourself, however, you should be able to lower the deployment target to iOS 12.0 without any issues.
 
-## Compilation Instructions
+## Compilation Instructions (Updated 1-16-2022 to build correctly on XCode 13. git repo address changed to include `Revisions.h` file that is missing in the main repo.)
+
 1. Clone this repository by running the following command in Terminal*  
 ```bash
-$ git clone https://github.com/rileytestut/Delta.git
+$ git clone https://github.com/forrestsyrett/Delta.git
 ```  
 
 2. Update Git submodules
@@ -149,7 +150,9 @@ $ git submodule update --init --recursive
 4. Select "Delta" under targets, then click the `Signing & Capabilities` tab.
 5. Change `Team` from `Yvette Testut` to your own account.
 6. Change `Bundle Identifier` to something unique, such as by appending your GitHub username (ex: `com.rileytestut.Delta.MyGitHubUsername`).
-7. Build + run app! 🎉
+7. Close `Delta.xcworkspace` and open `Systems/Systems.XCWorkspace` and change the `Team` from `Yvette Testut` to your own account.
+8. Close `Systems/Systems.XCWorkspace` and reopen `Delta.xcworkspace`.
+9. Build + run app! 🎉
 
 \* This will checkout the `main` branch by default, which is kept up-to-date with the latest public version. Ongoing development (including [Patreon betas](https://www.patreon.com/rileytestut)) is done on the `develop` branch, and is periodically merged into `main` whenever a new public version is released. If you'd prefer to compile the `develop` version instead, replace the `git clone` command in Step #1 with this one:
 ```bash
