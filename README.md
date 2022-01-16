@@ -146,14 +146,24 @@ $ git clone https://github.com/forrestsyrett/Delta.git
 $ cd Delta
 $ git submodule update --init --recursive
 ```  
+3. Create Revision.h file
+```bash
+$ cd Delta/Cores/N64DeltaCore/Mupen64Plus/GLideN64/src
+$ touch Revision.h
+```
+4. Open Revision.h and add the following lines:
+``` bash
+#define PLUGIN_REVISION ""
+#define PLUGIN_REVISION_W L""
+```
 
-3. Open `Delta.xcworkspace` and select the Delta project in the project navigator. 
-4. Select "Delta" under targets, then click the `Signing & Capabilities` tab.
-5. Change `Team` from `Yvette Testut` to your own account.
-6. Change `Bundle Identifier` to something unique, such as by appending your GitHub username (ex: `com.rileytestut.Delta.MyGitHubUsername`).
-7. Close `Delta.xcworkspace` and open `Systems/Systems.XCWorkspace` and change the `Team` from `Yvette Testut` to your own account.
-8. Close `Systems/Systems.XCWorkspace` and reopen `Delta.xcworkspace`.
-9. Build + run app! 🎉
+5. Open `Delta.xcworkspace` and select the Delta project in the project navigator. 
+6. Select "Delta" under targets, then click the `Signing & Capabilities` tab.
+7. Change `Team` from `Yvette Testut` to your own account.
+8. Change `Bundle Identifier` to something unique, such as by appending your GitHub username (ex: `com.rileytestut.Delta.MyGitHubUsername`).
+9. Close `Delta.xcworkspace` and open `Systems/Systems.XCWorkspace` and change the `Team` from `Yvette Testut` to your own account.
+10. Close `Systems/Systems.XCWorkspace` and reopen `Delta.xcworkspace`.
+11. Build + run app! 🎉
 
 \* This will checkout the `main` branch by default, which is kept up-to-date with the latest public version. Ongoing development (including [Patreon betas](https://www.patreon.com/rileytestut)) is done on the `develop` branch, and is periodically merged into `main` whenever a new public version is released. If you'd prefer to compile the `develop` version instead, replace the `git clone` command in Step #1 with this one:
 ```bash
