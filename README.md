@@ -143,13 +143,13 @@ $ git clone https://github.com/forrestsyrett/Delta.git
 
 2. Update Git submodules
 ```bash
-$ cd Delta
-$ git submodule update --init --recursive
+cd Delta
+git submodule update --init --recursive
 ```  
 3. Create Revision.h file
 ```bash
-$ cd Delta/Cores/N64DeltaCore/Mupen64Plus/GLideN64/src
-$ touch Revision.h
+cd Delta/Cores/N64DeltaCore/Mupen64Plus/GLideN64/src
+touch Revision.h
 ```
 4. Open Revision.h and add the following lines:
 ``` bash
