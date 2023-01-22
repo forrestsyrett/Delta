@@ -134,9 +134,9 @@ Each system in Delta is implemented as its own "Delta Core", which serves as a s
 Why iOS 12.2 or later? Doing so allows me to distribute Delta without embedding Swift libraries inside. This helps me afford bandwidth costs by reducing download sizes by roughly 30%, but also noticeably improves how long it takes to install/refresh Delta with AltStore. If you're compiling Delta yourself, however, you should be able to lower the deployment target to iOS 12.0 without any issues.
 
 ## Compilation Instructions 
-(Updated 1-16-2022 to build correctly on XCode 13)
+(Updated 1-22-23 to build correctly on XCode 14)
 
-1. Clone this repository by running the following command in Terminal*  
+1. Clone this repository by running the following command in Terminal* Make sure there are no spaces in the directory path you are placing this in. Any spaces in the directory path will cause compilation errors.
 ```bash
 $ git clone https://github.com/forrestsyrett/Delta.git
 ```  
