@@ -966,7 +966,7 @@ extension GameCollectionViewController: UICollectionViewDelegateFlowLayout
     }
 }
 
-@available(iOS 13.0, *)
+
 extension GameCollectionViewController
 {
     override func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration?

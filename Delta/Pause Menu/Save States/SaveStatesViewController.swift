@@ -760,7 +760,7 @@ extension SaveStatesViewController: UICollectionViewDelegateFlowLayout
     }
 }
 
-@available(iOS 13.0, *)
+
 extension SaveStatesViewController
 {
     override func collectionView(_ collectionView: UICollectionView, contextMenuConfigurationForItemAt indexPath: IndexPath, point: CGPoint) -> UIContextMenuConfiguration?
